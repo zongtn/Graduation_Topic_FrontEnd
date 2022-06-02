@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Userinfo_page">
+
+    <ImageView
+        android:id="@+id/login_imageHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_header_pic"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/login_header_layer"
+        app:layout_constraintBottom_toBottomOf="@id/login_imageHeader"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/viewSupporter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/login_imageHeader"
+        android:layout_marginBottom="30dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:background="@drawable/search_background"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/search_background"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewSupporter">
+
+            <TextView
+                android:id="@+id/textLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="@string/Userinfo_head"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <EditText
+                android:id="@+id/ed_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="您的email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/textLogin"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForaddtive1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_email" />
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/login_ic_email"
+                app:layout_constraintBottom_toBottomOf="@id/ed_email"
+                app:layout_constraintStart_toStartOf="@id/ed_email"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="您的帳號"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddtive1"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForaddtive2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_account"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/m_user"
+                app:layout_constraintBottom_toBottomOf="@id/ed_account"
+                app:layout_constraintStart_toStartOf="@id/ed_account"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="您的密碼"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddtive2"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForPassword"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_password" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/login_ic_lock"
+                app:layout_constraintBottom_toBottomOf="@id/ed_password"
+                app:layout_constraintStart_toStartOf="@id/ed_password"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="您的暱稱 "
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForPassword"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForName"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_name" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/m_user"
+                app:layout_constraintBottom_toBottomOf="@id/ed_name"
+                app:layout_constraintStart_toStartOf="@id/ed_name"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="您的電話"
+                android:imeOptions="actionDone"
+                android:inputType="textPhonetic"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForName"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForPhone"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_phone" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/signup_phone"
+                app:layout_constraintBottom_toBottomOf="@id/ed_phone"
+                app:layout_constraintStart_toStartOf="@id/ed_phone"
+                app:tint="@color/colorTextHint" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForPhone">
+
+                <Button
+                    android:id="@+id/btn_alter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/login_primary_button_background"
+                    android:backgroundTint="#00DCC7"
+                    android:text="資料修改"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/viewDividerForPhone"
+                    tools:layout_editor_absoluteX="26dp" />
+
+                <Button
+                    android:id="@+id/btn_fix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/login_primary_button_background"
+                    android:backgroundTint="#00DCC7"
+                    android:text="資料確認"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00FFFFFF"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_home"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:scaleType="centerInside"
+            android:text="@string/home"
+            app:srcCompat="@drawable/m_home" />
+
+        <ImageButton
+            android:id="@+id/btn_history"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/m_history" />
+
+        <ImageButton
+            android:id="@+id/btn_userinfo"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/m_user" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

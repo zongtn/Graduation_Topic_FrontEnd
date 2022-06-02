@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8E8E8E"
+    tools:context=".Companyinputlist2">
+
+    <ImageView
+        android:id="@+id/login_imageHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_header_pic"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/login_header_layer"
+        app:layout_constraintBottom_toBottomOf="@id/login_imageHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewSupporter"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/login_imageHeader"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:background="@drawable/search_background"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/login_background"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewSupporter"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="@string/title"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <EditText
+                android:id="@+id/ed_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/weightinfo"
+                android:imeOptions="actionNext"
+                android:inputType="text|number"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                tools:ignore="Autofill"
+                android:textColorHint="@color/colorTextHint"/>
+
+            <View
+                android:id="@+id/viewDividerForWeight"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_weight" />
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_weight"
+                app:layout_constraintBottom_toBottomOf="@id/ed_weight"
+                app:layout_constraintStart_toStartOf="@id/ed_weight"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/quantityinfo"
+                android:imeOptions="actionDone"
+                android:inputType="text|number"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/ed_weight"
+                tools:ignore="Autofill"
+                android:textColorHint="@color/colorTextHint"/>
+
+            <View
+                android:id="@+id/viewDividerForQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_quantity"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_weight"
+                app:layout_constraintBottom_toBottomOf="@id/ed_quantity"
+                app:layout_constraintStart_toStartOf="@id/ed_quantity"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_calories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/calories"
+                android:imeOptions="actionDone"
+                android:inputType="text|number"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForQuantity"
+                tools:ignore="Autofill"
+                android:textColorHint="@color/colorTextHint"/>
+
+            <View
+                android:id="@+id/viewDividerForCalories"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_calories" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_cardio"
+                app:layout_constraintBottom_toBottomOf="@id/ed_calories"
+                app:layout_constraintStart_toStartOf="@id/ed_calories"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_protein"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/protein"
+                android:imeOptions="actionDone"
+                android:inputType="text|number"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForCalories"
+                tools:ignore="Autofill"
+                android:textColorHint="@color/colorTextHint"/>
+
+            <View
+                android:id="@+id/viewDividerForProtein"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_protein" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company__protein"
+                app:layout_constraintBottom_toBottomOf="@id/ed_protein"
+                app:layout_constraintStart_toStartOf="@id/ed_protein"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_fat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/fat"
+                android:imeOptions="actionDone"
+                android:inputType="text|number"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForProtein"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp"
+                android:textColorHint="@color/colorTextHint"/>
+
+            <View
+                android:id="@+id/viewDividerForFat"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_fat" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company__fat"
+                app:layout_constraintBottom_toBottomOf="@id/ed_fat"
+                app:layout_constraintStart_toStartOf="@id/ed_fat"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_saturatedfat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/saturatedfat"
+                android:imeOptions="actionDone"
+                android:inputType="text|number"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForFat"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp"
+                android:textColorHint="@color/colorTextHint"/>
+
+            <View
+                android:id="@+id/viewDividerForSaturatedFat"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_saturatedfat" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company__fat"
+                app:layout_constraintBottom_toBottomOf="@id/ed_saturatedfat"
+                app:layout_constraintStart_toStartOf="@id/ed_saturatedfat"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_transfat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/transfat"
+                android:imeOptions="actionDone"
+                android:inputType="text|number"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForSaturatedFat"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp"
+                android:textColorHint="@color/colorTextHint"/>
+
+            <View
+                android:id="@+id/viewDividerForTransFat"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_transfat" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company__fat"
+                app:layout_constraintBottom_toBottomOf="@id/ed_transfat"
+                app:layout_constraintStart_toStartOf="@id/ed_transfat"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_sugar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/sugar"
+                android:imeOptions="actionDone"
+                android:inputType="text|number"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForTransFat"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp"
+                android:textColorHint="@color/colorTextHint"/>
+
+            <View
+                android:id="@+id/viewDividerForSugar"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_sugar" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_sugar"
+                app:layout_constraintBottom_toBottomOf="@id/ed_sugar"
+                app:layout_constraintStart_toStartOf="@id/ed_sugar"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_na"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/na"
+                android:imeOptions="actionDone"
+                android:inputType="text|number"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForSugar"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp"
+                android:textColorHint="@color/colorTextHint"/>
+
+            <View
+                android:id="@+id/viewDividerForNa"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_na" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_na"
+                app:layout_constraintBottom_toBottomOf="@id/ed_na"
+                app:layout_constraintStart_toStartOf="@id/ed_na"
+                app:tint="@color/colorTextHint" />
+
+            <Button
+                android:id="@+id/btn_toinput1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/login_primary_button_background"
+                android:backgroundTint="#00DCC7"
+                android:text="@string/previous"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForNa"
+                tools:layout_editor_absoluteX="26dp" />
+
+            <Button
+                android:id="@+id/btn_toinput3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/login_primary_button_background"
+                android:backgroundTint="#00DCC7"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/btn_toinput1"
+                tools:layout_editor_absoluteX="26dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

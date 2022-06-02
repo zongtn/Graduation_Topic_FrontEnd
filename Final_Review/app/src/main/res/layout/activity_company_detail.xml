@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8E8E8E"
+    tools:context=".Company_detail">
+
+    <ImageView
+        android:id="@+id/login_imageHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_header_pic"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/login_header_layer"
+        app:layout_constraintBottom_toBottomOf="@id/login_imageHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/login_imageHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="@string/produce_input_title"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewSupporter"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/login_imageHeader"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:background="@drawable/search_background"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/login_background"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewSupporter">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="157dp" />
+
+            <TextView
+                android:id="@+id/Company_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="@string/company_detail_title"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="40dp" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="140dp"
+                android:layout_height="190dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline10"
+                app:layout_constraintEnd_toStartOf="@+id/guideline19"
+                app:layout_constraintTop_toTopOf="@+id/guideline10">
+
+                <ImageButton
+                    android:id="@+id/btn_qrcode_create"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:background="#00000000"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/m_qrcode"
+                    tools:layout_editor_absoluteX="40dp" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:text="@string/create_qrcode_info"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="140dp"
+                android:layout_height="190dp"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline10"
+                app:layout_constraintStart_toStartOf="@+id/guideline19"
+                app:layout_constraintTop_toBottomOf="@+id/Company_detail_title"
+                app:layout_constraintTop_toTopOf="@+id/guideline10">
+
+                <ImageButton
+                    android:id="@+id/btn_datafix"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:background="#00000000"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/m_fix"
+                    tools:layout_editor_absoluteX="40dp" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/datafix_info"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="@string/produce_input_info"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <EditText
+                android:id="@+id/ed_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="請輸入產品名稱"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:paddingStart="80dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/textLogin"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <View
+                android:id="@+id/viewDividerForaddtive1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_name" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:text="@string/name_name"
+                android:textColor="@color/colorTextHint"
+                app:layout_constraintBottom_toBottomOf="@id/ed_name"
+                app:layout_constraintStart_toStartOf="@id/ed_name"
+                app:tint="@color/colorTextHint" />
+
+
+            <EditText
+                android:id="@+id/ed_totalweight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="@string/totallyweight_info"
+                android:imeOptions="actionDone"
+                android:inputType="text|number"
+                android:paddingStart="80dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddtive1"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <View
+                android:id="@+id/viewDividerForaddtive2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_totalweight"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:text="@string/totalweight_name"
+                android:textColor="@color/colorTextHint"
+                app:layout_constraintBottom_toBottomOf="@id/ed_totalweight"
+                app:layout_constraintStart_toStartOf="@id/ed_totalweight"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_origin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="@string/produce_from"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:paddingStart="80dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddtive2"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <View
+                android:id="@+id/viewDividerForaddtive3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_origin"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:text="@string/origin_name"
+                android:textColor="@color/colorTextHint"
+                app:layout_constraintBottom_toBottomOf="@id/ed_origin"
+                app:layout_constraintStart_toStartOf="@id/ed_origin"
+                app:tint="@color/colorTextHint" />
+
+            <TextView
+                android:id="@+id/textLogin1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="@string/product_from_ingredient"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddtive3" />
+
+            <EditText
+                android:id="@+id/ed_ingred1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="@string/input_ingredient1"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/textLogin1"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForaddtive4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_ingred1" />
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_addtive"
+                app:layout_constraintBottom_toBottomOf="@id/ed_ingred1"
+                app:layout_constraintStart_toStartOf="@id/ed_ingred1"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_ingred2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="@string/input_ingredient1"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddtive4"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForaddtive5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_ingred2"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_addtive"
+                app:layout_constraintBottom_toBottomOf="@id/ed_ingred2"
+                app:layout_constraintStart_toStartOf="@id/ed_ingred2"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_ingred3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="@string/input_ingredient1"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddtive5"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForaddtive6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_ingred3"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_addtive"
+                app:layout_constraintBottom_toBottomOf="@id/ed_ingred3"
+                app:layout_constraintStart_toStartOf="@id/ed_ingred3"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_ingred4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="@string/input_ingredient1"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddtive6"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForaddtive7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_ingred4"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_addtive"
+                app:layout_constraintBottom_toBottomOf="@id/ed_ingred4"
+                app:layout_constraintStart_toStartOf="@id/ed_ingred4"
+                app:tint="@color/colorTextHint" />
+
+            <TextView
+                android:id="@+id/textLogin2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="@string/title"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddtive7" />
+
+            <EditText
+                android:id="@+id/ed_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/weightinfo"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:paddingStart="80dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/textLogin2"
+                tools:ignore="Autofill" />
+
+            <View
+                android:id="@+id/viewDividerForWeight"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_weight" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:text="@string/weight_name"
+                android:textColor="@color/colorTextHint"
+                app:layout_constraintBottom_toBottomOf="@id/ed_weight"
+                app:layout_constraintStart_toStartOf="@id/ed_weight"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/quantityinfo"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:paddingStart="80dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/ed_weight"
+                tools:ignore="Autofill" />
+
+            <View
+                android:id="@+id/viewDividerForQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_quantity"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:text="@string/quantity_name"
+                android:textColor="@color/colorTextHint"
+                app:layout_constraintBottom_toBottomOf="@id/ed_quantity"
+                app:layout_constraintStart_toStartOf="@id/ed_quantity"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_calories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/calories"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:paddingStart="80dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForQuantity"
+                tools:ignore="Autofill" />
+
+            <View
+                android:id="@+id/viewDividerForCalories"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_calories" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:text="@string/calories_name"
+                android:textColor="@color/colorTextHint"
+                app:layout_constraintBottom_toBottomOf="@id/ed_calories"
+                app:layout_constraintStart_toStartOf="@id/ed_calories"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_protein"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/protein"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:paddingStart="80dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForCalories"
+                tools:ignore="Autofill" />
+
+            <View
+                android:id="@+id/viewDividerForProtein"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_protein" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:text="@string/protein_name"
+                android:textColor="@color/colorTextHint"
+                app:layout_constraintBottom_toBottomOf="@id/ed_protein"
+                app:layout_constraintStart_toStartOf="@id/ed_protein"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_fat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/fat"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:paddingStart="80dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForProtein"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForFat"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_fat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:text="@string/fat_name"
+                android:textColor="@color/colorTextHint"
+                app:layout_constraintBottom_toBottomOf="@id/ed_fat"
+                app:layout_constraintStart_toStartOf="@id/ed_fat"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_saturatedfat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/saturatedfat"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:paddingStart="80dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForFat"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForSaturatedFat"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_saturatedfat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:text="@string/saturatedfat_name"
+                android:textColor="@color/colorTextHint"
+                app:layout_constraintBottom_toBottomOf="@id/ed_saturatedfat"
+                app:layout_constraintStart_toStartOf="@id/ed_saturatedfat"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_transfat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/transfat"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:paddingStart="80dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForSaturatedFat"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForTransFat"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_transfat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:text="@string/transfat_name"
+                android:textColor="@color/colorTextHint"
+                app:layout_constraintBottom_toBottomOf="@id/ed_transfat"
+                app:layout_constraintStart_toStartOf="@id/ed_transfat"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_sugar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/sugar"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:paddingStart="80dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForTransFat"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForSugar"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_sugar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:text="@string/sugar_name"
+                android:textColor="@color/colorTextHint"
+                app:layout_constraintBottom_toBottomOf="@id/ed_sugar"
+                app:layout_constraintStart_toStartOf="@id/ed_sugar"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_na"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/na"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:paddingStart="80dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForSugar"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForNa"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_na" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:text="@string/na_name"
+                android:textColor="@color/colorTextHint"
+                app:layout_constraintBottom_toBottomOf="@id/ed_na"
+                app:layout_constraintStart_toStartOf="@id/ed_na"
+                app:tint="@color/colorTextHint" />
+
+            <TextView
+                android:id="@+id/textLogin3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="@string/produce_input_additive_info"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/viewDividerForNa" />
+
+            <EditText
+                android:id="@+id/ed_add1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="@string/input_addtive"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/textLogin3"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForaddition1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_add1" />
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_addtive"
+                app:layout_constraintBottom_toBottomOf="@id/ed_add1"
+                app:layout_constraintStart_toStartOf="@id/ed_add1"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_add2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="@string/input_addtive"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddition1"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForaddition2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_add2"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_addtive"
+                app:layout_constraintBottom_toBottomOf="@id/ed_add2"
+                app:layout_constraintStart_toStartOf="@id/ed_add2"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_add3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="@string/input_addtive"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddition2"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForaddition3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_add3"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_addtive"
+                app:layout_constraintBottom_toBottomOf="@id/ed_add3"
+                app:layout_constraintStart_toStartOf="@id/ed_add3"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_add4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="@string/input_addtive"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddition3"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <View
+                android:id="@+id/viewDividerForaddition4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_add4"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_addtive"
+                app:layout_constraintBottom_toBottomOf="@id/ed_add4"
+                app:layout_constraintStart_toStartOf="@id/ed_add4"
+                app:tint="@color/colorTextHint" />
+
+            <Button
+                android:id="@+id/btn_fixdata_access"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/login_primary_button_background"
+                android:backgroundTint="#00DCC7"
+                android:text="@string/data_fix_access"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddition4"
+                tools:layout_editor_absoluteX="44dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pu.a0327interface">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.0327interface">
+
+        <activity android:name=".User" />
+        <activity android:name=".Company_qrcode_create" />
+        <activity android:name=".Company_detail" />
+        <activity android:name=".History_page" />
+        <activity android:name=".User_qrsearch" />
+        <activity android:name=".Userinfo_page" />
+        <activity android:name=".User_login" />
+        <activity android:name=".User_search" />
+        <activity android:name=".User_signup" />
+        <activity android:name=".User_track" />
+        <activity android:name=".User_comment" />
+        <activity android:name=".company_product_list"/>
+        <activity android:name=".LoginPage" />
+        <activity android:name=".company_register" />
+        <activity android:name=".Companyinputlist" />
+        <activity android:name=".Companyinputlist1" />
+        <activity android:name=".Companyinputlist2" />
+        <activity android:name=".Companyinputlist3" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+        <activity android:name=".User_detail" />
+    </application>
+
+</manifest>

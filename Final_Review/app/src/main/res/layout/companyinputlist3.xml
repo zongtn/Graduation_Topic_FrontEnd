@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8E8E8E"
+    tools:context=".Companyinputlist3">
+
+    <ImageView
+        android:id="@+id/login_imageHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_header_pic"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/login_header_layer"
+        app:layout_constraintBottom_toBottomOf="@id/login_imageHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewSupporter"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/login_imageHeader"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:background="@drawable/search_background"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/login_background"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewSupporter">
+
+            <TextView
+                android:id="@+id/textLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="@string/produce_input_additive_info"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="40dp" />
+
+            <EditText
+                android:id="@+id/ed_add1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="@string/input_addtive"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/textLogin"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp"
+                android:textColorHint="@color/colorTextHint"/>
+
+            <View
+                android:id="@+id/viewDividerForaddtive1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_add1" />
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_addtive"
+                app:layout_constraintBottom_toBottomOf="@id/ed_add1"
+                app:layout_constraintStart_toStartOf="@id/ed_add1"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_add2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="@string/input_addtive"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddtive1"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp"
+                android:textColorHint="@color/colorTextHint"/>
+
+            <View
+                android:id="@+id/viewDividerForaddtive2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_add2"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_addtive"
+                app:layout_constraintBottom_toBottomOf="@id/ed_add2"
+                app:layout_constraintStart_toStartOf="@id/ed_add2"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_add3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="@string/input_addtive"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddtive2"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp"
+                android:textColorHint="@color/colorTextHint"/>
+
+            <View
+                android:id="@+id/viewDividerForaddtive3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_add3"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_addtive"
+                app:layout_constraintBottom_toBottomOf="@id/ed_add3"
+                app:layout_constraintStart_toStartOf="@id/ed_add3"
+                app:tint="@color/colorTextHint" />
+
+            <EditText
+                android:id="@+id/ed_add4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@null"
+                android:hint="@string/input_addtive"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddtive3"
+                tools:ignore="Autofill"
+                tools:layout_editor_absoluteX="40dp"
+                android:textColorHint="@color/colorTextHint"/>
+
+            <View
+                android:id="@+id/viewDividerForaddtive4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorTextHint"
+                app:layout_constraintTop_toBottomOf="@id/ed_add4"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/c_company_addtive"
+                app:layout_constraintBottom_toBottomOf="@id/ed_add4"
+                app:layout_constraintStart_toStartOf="@id/ed_add4"
+                app:tint="@color/colorTextHint" />
+
+            <Button
+                android:id="@+id/btn_toinput2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/login_primary_button_background"
+                android:backgroundTint="#00DCC7"
+                android:text="@string/back_to_list_info"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerForaddtive4"
+                tools:layout_editor_absoluteX="44dp" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/login_primary_button_background"
+                android:backgroundTint="#00DCC7"
+                android:text="@string/input_data_page1"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/btn_toinput2"
+                tools:layout_editor_absoluteX="30dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

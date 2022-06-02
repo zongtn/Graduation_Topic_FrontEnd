@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".User_detail">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_header_pic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/login_header_layer"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="280dp"
+        android:layout_height="580dp"
+        android:background="@drawable/res_bg"
+        android:elevation="15dp"
+        android:translationY="-30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo"
+        app:layout_constraintWidth_percent=".8">
+
+        <TextView
+            android:id="@+id/tv_produce"
+            android:layout_width="180dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="食品名稱"
+            android:textColor="@color/colorTextHint"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.002" />
+
+        <TextView
+            android:id="@+id/tv_company"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="4dp"
+            android:text="公司"
+            android:textColor="@color/colorTextHint"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_origin" />
+
+        <com.like.LikeButton
+            android:id="@+id/btn_like"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="2dp"
+            android:background="#FFFFFF"
+            app:icon_size="8dp"
+            app:icon_type="heart"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintHorizontal_bias="0.457"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toTopOf="@+id/guideline11"
+            app:liked="false"
+            tools:ignore="DuplicateIds,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_origin"
+            android:layout_width="56dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="8dp"
+            android:text="產地"
+            android:textColor="@color/colorTextHint"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_produce" />
+
+        <TextView
+            android:id="@+id/nu_titile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:text="營養標示"
+            android:textColor="@color/colorTextHint"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_company" />
+
+        <TextView
+            android:id="@+id/tv_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="5dp"
+            android:text="重量"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nu_titile" />
+
+        <TextView
+            android:id="@+id/tv_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="5dp"
+            android:text="份量"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_weight" />
+
+        <TextView
+            android:id="@+id/tv_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="4dp"
+            android:text="熱量"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_quantity" />
+
+        <TextView
+            android:id="@+id/tv_protein"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="4dp"
+            android:text="蛋白質"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_calories" />
+
+        <TextView
+            android:id="@+id/tv_fat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="4dp"
+            android:text="脂肪"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_protein" />
+
+        <TextView
+            android:id="@+id/tv_saturatedfat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="4dp"
+            android:text="飽和脂肪"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fat" />
+
+        <TextView
+            android:id="@+id/tv_transfat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="4dp"
+            android:text="反式脂肪"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_saturatedfat" />
+
+        <TextView
+            android:id="@+id/tv_sugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="4dp"
+            android:text="糖"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_transfat" />
+
+        <TextView
+            android:id="@+id/tv_na"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="4dp"
+            android:text="鈉"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sugar" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="184dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="233dp" />
+
+        <TextView
+            android:id="@+id/tv_origin_name"
+            android:layout_width="47dp"
+            android:layout_height="26dp"
+            android:text="產地"
+            android:textColor="@color/colorTextHint"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_origin"
+            app:layout_constraintTop_toTopOf="@+id/tv_origin"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_company_name"
+            android:layout_width="46dp"
+            android:layout_height="24dp"
+            android:text="公司"
+            android:textColor="@color/colorTextHint"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_company"
+            app:layout_constraintTop_toTopOf="@+id/tv_company"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_weight_name"
+            android:layout_width="32dp"
+            android:layout_height="19dp"
+            android:text="重量"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toTopOf="@+id/tv_weight"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_quantity_name"
+            android:layout_width="32dp"
+            android:layout_height="19dp"
+            android:text="份量"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toTopOf="@+id/tv_quantity"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_calories_name"
+            android:layout_width="32dp"
+            android:layout_height="19dp"
+            android:text="熱量"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toTopOf="@+id/tv_calories"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_protein_name"
+            android:layout_width="45dp"
+            android:layout_height="19dp"
+            android:text="蛋白質"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toTopOf="@+id/tv_protein"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_fat_name"
+            android:layout_width="32dp"
+            android:layout_height="19dp"
+            android:text="脂肪"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toTopOf="@+id/tv_fat"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_saturatedfat_name"
+            android:layout_width="59dp"
+            android:layout_height="20dp"
+            android:text="飽和脂肪"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toTopOf="@+id/tv_saturatedfat"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_transfat_name"
+            android:layout_width="59dp"
+            android:layout_height="20dp"
+            android:text="反式脂肪"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toTopOf="@+id/tv_transfat"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_sugar_name"
+            android:layout_width="18dp"
+            android:layout_height="19dp"
+            android:text="糖"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toTopOf="@+id/tv_sugar"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_na_name"
+            android:layout_width="18dp"
+            android:layout_height="19dp"
+            android:text="鈉"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toTopOf="@+id/tv_na"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/ingred_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:text="成分"
+            android:textColor="@color/colorTextHint"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_na_name" />
+
+        <TextView
+            android:id="@+id/tv_ingreds"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:text="成分"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toBottomOf="@+id/ingred_title" />
+
+        <TextView
+            android:id="@+id/add_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:text="添加劑"
+            android:textColor="@color/colorTextHint"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ingreds" />
+
+        <TextView
+            android:id="@+id/tv_adds"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:text="添加劑"
+            android:textColor="@color/colorTextHint"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toBottomOf="@+id/add_title" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="43dp" />
+
+        <ImageButton
+            android:id="@+id/btn_comment"
+            android:layout_width="65dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/m_comment__icon" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="35dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
