@@ -1,6 +1,7 @@
 # 畢業專題-食在安心
-<hr>
-### 成果摘要： <br>
+
+### 未來功能規劃
+###  成果摘要：
 - 廠商:<br>
    ．登入、登出<br>
    ．修改用戶資料<br>
@@ -15,7 +16,7 @@
    ．商品追蹤<br>
    ．查看搜尋的歷史清單<br>
   
-<hr>
+
 ### 技術:<br>
 - app端：<br>
    ．運用android studio 撰寫java原生app<br>
@@ -26,6 +27,4 @@
    ．運用php 撰寫API<br>
    ．運用MYSQL作為資料庫使用<br>
   
-<hr>
-作品影片: (https://www.youtube.com/watch?v=bQGtfLfLRfw)
-<hr>
+
