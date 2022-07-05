@@ -1,6 +1,6 @@
 # 畢業專題-食在安心
 <hr>
-成果摘要： <br>
+### 成果摘要： <br>
 - 廠商:<br>
    ．登入、登出<br>
    ．修改用戶資料<br>
@@ -16,7 +16,7 @@
    ．查看搜尋的歷史清單<br>
   
 <hr>
-技術:<br>
+### 技術:<br>
 - app端：<br>
    ．運用android studio 撰寫java原生app<br>
    ．運用ZXING 實現QRCODE的生成以及查詢<br>
