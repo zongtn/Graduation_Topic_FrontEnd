@@ -21,6 +21,7 @@
    - 運用ZXING 實現QRCODE的生成以及查詢<br>
    - 運用 jitpack.io 套件作為部分功能使用<br>
 - 後端：<br>
+   - [後端github連結](https://github.com/zongtn/Graduation_Topic_BackEnd)<br>
    - 運用WAMP作為後端環境<br>
    - 運用php 撰寫API<br>
    - 運用MYSQL作為資料庫使用<br>
